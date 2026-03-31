@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+
+    <!-- ── Primary Meta ───────────────────────────────────────── -->
+    <title>🥚 Campus Egg Hunt</title>
+    <meta
+      name="description"
+      content="Live multiplayer Easter Egg Hunt for your campus. Find eggs, scan QR codes, compete in real time."
+    />
+    <meta name="application-name" content="Egg Hunt" />
+    <meta
+      name="keywords"
+      content="easter egg hunt, campus, QR code, multiplayer, game"
+    />
+
+    <!-- ── PWA / Theme ───────────────────────────────────────── -->
+    <meta name="theme-color" content="#0d0f1a" />
+    <meta name="background-color" content="#0d0f1a" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- ── iOS / Safari ──────────────────────────────────────── -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Egg Hunt" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Splash screens for common iPhone sizes -->
+    <link
+      rel="apple-touch-startup-image"
+      href="/icons/icon-512x512.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/icons/icon-512x512.png"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/icons/icon-512x512.png"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+    />
+
+    <!-- ── Favicons ───────────────────────────────────────────── -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/icons/icon-192x192.png"
+    />
+
+    <!-- ── Open Graph (for share previews) ───────────────────── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Campus Easter Egg Hunt 🥚" />
+    <meta
+      property="og:description"
+      content="Live multiplayer Easter Egg Hunt — scan QR codes, claim eggs, compete in real time."
+    />
+    <meta property="og:image" content="/screenshot-wide.png" />
+
+    <!-- ── Preconnect to API & fonts ─────────────────────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

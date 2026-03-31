@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0d0f1a;
+  --card: #151827;
+  --border: #1e2235;
+  --text: #e8eaf6;
+  --muted: #6b7280;
+  --coral: #ff6b6b;
+  --mint: #51cf66;
+  --lavender: #cc5de8;
+  --canary: #ffd43b;
+  --sky: #339af0;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Glow effect utility */
+.glow-coral { box-shadow: 0 0 20px rgba(255, 107, 107, 0.3); }
+.glow-mint { box-shadow: 0 0 20px rgba(81, 207, 102, 0.3); }
+.glow-lavender { box-shadow: 0 0 20px rgba(204, 93, 232, 0.3); }
+.glow-canary { box-shadow: 0 0 20px rgba(255, 212, 59, 0.3); }
+.glow-sky { box-shadow: 0 0 20px rgba(51, 154, 240, 0.3); }
+
+/* Glass card effect */
+.glass {
+  background: rgba(21, 24, 39, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Activity feed item */
+.activity-egg { border-left: 3px solid var(--canary); }
+.activity-hint { border-left: 3px solid var(--sky); }
+.activity-join { border-left: 3px solid var(--mint); }
+
+/* QR Code container */
+.qr-container canvas, .qr-container svg {
+  border-radius: 8px;
+}
+
+/* Scanner view */
+#qr-reader {
+  border: none !important;
+  width: 100% !important;
+}
+#qr-reader video {
+  border-radius: 12px;
+}
+#qr-reader__scan_region {
+  border-radius: 12px;
+  overflow: hidden;
+}
+#qr-reader img { display: none !important; }
+#qr-reader__dashboard_section_swaplink { display: none !important; }
+#qr-reader__status_span { color: #6b7280 !important; font-size: 12px !important; font-family: 'Plus Jakarta Sans', sans-serif !important; }
+#qr-reader__dashboard { border-top: 1px solid #1e2235 !important; padding: 8px 0 0 0 !important; }
+#qr-reader select { 
+  background: #151827 !important; 
+  color: #e8eaf6 !important; 
+  border: 1px solid #1e2235 !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Pulse ring animation */
+@keyframes ping-slow {
+  75%, 100% { transform: scale(1.5); opacity: 0; }
+}
+.ping-slow { animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+/* Stagger animations */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
