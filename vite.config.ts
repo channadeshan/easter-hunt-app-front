@@ -203,28 +203,5 @@ export default defineConfig({
     // NOTE: This only works in `npm run dev`. In production, configure nginx/
     //       caddy to proxy the same paths, OR fix the backend CORS config.
     // ─────────────────────────────────────────────────────────────────────────
-    proxy: {
-      // Socket.IO — ws:true is critical to upgrade HTTP→WebSocket
-      "/socket.io": {
-        target: "http://localhost:5050",
-        changeOrigin: true,
-        ws: true,
-      },
-      // Admin API
-      "/api/admin": {
-        target: "http://localhost:5050",
-        changeOrigin: true,
-      },
-      // Participant API
-      "/api/parti": {
-        target: "http://localhost:5050",
-        changeOrigin: true,
-      },
-      // Auth API (The new one you needed!)
-      "/api/auth": {
-        target: "http://localhost:5050",
-        changeOrigin: true,
-      },
-    },
   },
 });
