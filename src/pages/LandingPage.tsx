@@ -37,6 +37,7 @@ export default function LandingPage() {
       if (!res.ok) {
         const d = await res.json();
         setError(d.message || "Invalid password");
+        console.log("Invalid Password");
         return;
       }
       await checkStatus();
