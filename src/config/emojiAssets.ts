@@ -70,7 +70,7 @@ export const EGG_EMOJIS: EmojiAsset[] = [
 export function defaultAsset(pool: EmojiAsset[]): EmojiAsset {
   return {
     label: "Default",
-    url: "https://res.cloudinary.com/dlr1glkjt/image/upload/q_auto/f_auto/v1775036176/Untitled_design_gd2mkc.png",
+    url: "https://res.cloudinary.com/dlr1glkjt/image/upload/q_auto/f_auto/v1775036598/Untitled_design_2_odzj0m.png",
   };
 }
 
