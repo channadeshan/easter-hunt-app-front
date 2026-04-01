@@ -55,6 +55,11 @@ export default function AdminDashboard() {
   const [resetting, setResetting] = useState(false);
   const [formError, setFormError] = useState("");
 
+  const fetchEggName = (id: string) => {
+    const egg = eggs.find((e) => e._id === id);
+    return egg ? egg.name : "Unknown Egg";
+  };
+
   const fetchEggs = useCallback(async () => {
     setEggsLoading(true);
     try {
@@ -576,6 +581,9 @@ export default function AdminDashboard() {
                       <div className="flex-1 min-w-0">
                         <p className="font-body text-sm text-white">
                           {hint.text}
+                        </p>
+                        <p className="font-body text-xs text-gray-500 mt-1">
+                          Egg: {fetchEggName(hint.eggId)}
                         </p>
                         <p className="font-mono text-xs text-gray-500 mt-1 truncate">
                           {hint.uniqueCode}
