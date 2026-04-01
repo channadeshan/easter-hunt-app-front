@@ -112,7 +112,7 @@ export default function LandingPage() {
             />
           </div>
           <h1 className="font-display text-4xl font-bold text-white tracking-wide">
-            Egg Hunt
+            Easter Hunt
           </h1>
           <p className="text-gray-500 font-body text-sm mt-2">
             Campus Easter Egg Hunt &middot; Live
