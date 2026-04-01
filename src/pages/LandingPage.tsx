@@ -107,7 +107,7 @@ export default function LandingPage() {
           <div className="inline-block mb-4 animate-float">
             <img
               src={defaultAsset(PARTICIPANT_AVATARS).url}
-              alt="Egg Hunt"
+              alt="Easter Hunt"
               className="w-20 h-20 mx-auto"
             />
           </div>
@@ -115,7 +115,7 @@ export default function LandingPage() {
             Easter Hunt
           </h1>
           <p className="text-gray-500 font-body text-sm mt-2">
-            Campus Easter Egg Hunt &middot; Live
+            Kaakko Easter Egg Hunt &middot; Live
           </p>
         </div>
 
