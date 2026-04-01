@@ -68,7 +68,10 @@ export const EGG_EMOJIS: EmojiAsset[] = [
 
 /** Returns the first asset in the pool (used as the default selection). */
 export function defaultAsset(pool: EmojiAsset[]): EmojiAsset {
-  return pool[0];
+  return {
+    label: "Default",
+    url: "https://res.cloudinary.com/dlr1glkjt/image/upload/q_auto/f_auto/v1775036176/Untitled_design_gd2mkc.png",
+  };
 }
 
 /** Returns the label for a given URL, or a fallback string. */
