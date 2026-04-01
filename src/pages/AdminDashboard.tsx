@@ -582,9 +582,6 @@ export default function AdminDashboard() {
                         <p className="font-body text-sm text-white">
                           {hint.text}
                         </p>
-                        <p className="font-body text-xs text-gray-500 mt-1">
-                          Egg: {egg ? egg.name : "Unknown Egg"}
-                        </p>
                         <p className="font-mono text-xs text-gray-500 mt-1 truncate">
                           {hint.uniqueCode}
                         </p>
