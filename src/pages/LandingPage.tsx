@@ -25,15 +25,12 @@ export default function LandingPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(
-        `https://easter-hunt-app.onrender.com/api/admin/login`,
-        {
-          method: "POST",
-          credentials: "include",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ password }),
-        },
-      );
+      const res = await fetch(`${ADMIN_API}/login`, {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
       if (!res.ok) {
         const d = await res.json();
         setError(d.message || "Invalid password");
